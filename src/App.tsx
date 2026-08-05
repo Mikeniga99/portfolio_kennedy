@@ -1,16 +1,16 @@
 import { useState, useEffect, useRef, useCallback, type CSSProperties, type FormEvent } from 'react'
 
-const posterImg = new URL('../../../images/Affiche motivation.png', import.meta.url).href
-const logoVideo = new URL('../../../images/logo animated.mp4', import.meta.url).href
-const presentationVideo = new URL('../../../images/Firefly Créer une vidéo publicitaire premium de 30 à 45 secondes pour BLACK STUDIO, une agence créat.mp4', import.meta.url).href
-const closingVideo = new URL('../../../images/2358670007.mp4', import.meta.url).href
-const ewaImg = new URL('../../../images/Ewa.png', import.meta.url).href
-const blackStudioCarteImg = new URL('../../../images/Logo_Branding.jpeg', import.meta.url).href
-const weekendCompteARebourImg = new URL('../../../images/Affiche Compte a rebours.png', import.meta.url).href
-const akossiwaLundiImg = new URL('../../../images/Affiche Lundi.jpg', import.meta.url).href
-const weekArtAfficheImg = new URL('../../../images/Affiche offi avec les logos.png', import.meta.url).href
-const blackStudioGrandFormatImg = new URL('../../../images/Bache SEBA 3.jpg', import.meta.url).href
-const koudiChipsImg = new URL('../../../images/Etiquette chips.jpg', import.meta.url).href
+const posterImg = new URL('./imports/Affiche_motivation.png', import.meta.url).href
+const logoVideo = new URL('./imports/logo_animated.mp4', import.meta.url).href
+const presentationVideo = new URL('./imports/videos/black-studio-presentation.mp4', import.meta.url).href
+const closingVideo = new URL('./imports/videos/black-studio-souriez.mp4', import.meta.url).href
+const ewaImg = new URL('./imports/portfolio/ewa.png', import.meta.url).href
+const blackStudioCarteImg = new URL('./imports/portfolio/black-studio-carte.png', import.meta.url).href
+const weekendCompteARebourImg = new URL('./imports/portfolio/weekend-artistique-compte-a-rebours.png', import.meta.url).href
+const akossiwaLundiImg = new URL('./imports/portfolio/akossiwa-lundi.jpg', import.meta.url).href
+const weekArtAfficheImg = new URL('./imports/portfolio/week-art-affiche-officielle.png', import.meta.url).href
+const blackStudioGrandFormatImg = new URL('./imports/portfolio/black-studio-grand-format.jpg', import.meta.url).href
+const koudiChipsImg = new URL('./imports/portfolio/koudi-chips-etiquette.jpg', import.meta.url).href
 
 // ─── Data ──────────────────────────────────────────────────────────────────
 
