@@ -63,11 +63,11 @@ const SVGIcon = ({ type, color = 'currentColor', size = 20 }: { type: string, co
 // ─── Data ──────────────────────────────────────────────────────────────────
 
 const HERO_POSTERS = [
-  { id: 0, category: '01 — SOCIAL MEDIA', badge: 'SOCIAL MEDIA DESIGN', title: 'Kennedy Rolland', accent: '#FF6B35', highlight: 'GRAPHISTE DESIGNER', image: afficheCompteARebourImg },
+  { id: 0, category: '01 — SOCIAL MEDIA', badge: 'SOCIAL MEDIA DESIGN', title: 'Kennedy Rolland', accent: '#FACC15', highlight: 'GRAPHISTE DESIGNER', image: afficheCompteARebourImg },
   { id: 1, category: '02 — BRANDING', badge: 'BRANDING DESIGN', title: 'Black Studio', accent: '#FFFFFF', highlight: 'IDENTITÉ VISUELLE', image: blackStudioImg },
-  { id: 2, category: '03 — PACKAGING', badge: 'PACKAGING DESIGN', title: 'Èwa', accent: '#FF6B35', highlight: 'PACKAGING', image: ewaImg },
+  { id: 2, category: '03 — PACKAGING', badge: 'PACKAGING DESIGN', title: 'Èwa', accent: '#FACC15', highlight: 'PACKAGING', image: ewaImg },
   { id: 3, category: '04 — PRINT', badge: 'PRINT MEDIA', title: 'Week Art', accent: '#FFFFFF', highlight: 'PRINT DESIGN', image: weekArtImg },
-  { id: 4, category: '05 — COMMUNICATION', badge: 'COMMUNICATION VISUELLE', title: 'Akossiwa', accent: '#FF6B35', highlight: 'SOCIAL MEDIA', image: afficheLundiImg },
+  { id: 4, category: '05 — COMMUNICATION', badge: 'COMMUNICATION VISUELLE', title: 'Akossiwa', accent: '#FACC15', highlight: 'SOCIAL MEDIA', image: afficheLundiImg },
 ]
 
 
@@ -1002,7 +1002,7 @@ function Contact({ accent }: { accent: string }) {
         <div className="responsive-grid-3" style={{ display: 'grid', gap: '2rem' }}>
           {[
             { label: 'EMAIL', value: 'rollandkennedy72@gmail.com', link: 'mailto:rollandkennedy72@gmail.com', icon: 'email' },
-            { label: 'TÉLÉPHONE', value: '+229 01 92 87 18 67\n+229 01 61 10 83 03', link: 'tel:+22901928718 67', icon: 'phone' },
+            { label: 'TÉLÉPHONE', value: '+229 01 92 81 18 61\n', link: 'tel:+2290192811861', icon: 'phone' },
             { label: 'LINKEDIN', value: 'Kennedy Rolland', link: '#', icon: 'linkedin' },
           ].map((item, i) => (
             <a key={item.label} data-reveal data-delay={String(i + 1)} href={item.link}
@@ -1079,7 +1079,7 @@ function Footer({ accent }: { accent: string }) {
 // ─── App ──────────────────────────────────────────────────────────────────
 
 export default function App() {
-  const [accent, setAccent] = useState('#FF6B35')
+  const [accent, setAccent] = useState('#FACC15')
   useScrollReveal()
 
   return (
