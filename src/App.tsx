@@ -59,11 +59,11 @@ const PORTFOLIO_ITEMS = [
 ]
 
 const SERVICES = [
-  { icon: 'logo', title: 'Logo Design', desc: "Identité visuelle percutante, mémorable, déclinée en tous formats vectoriels." },
-  { icon: 'branding', title: 'Branding', desc: "Charte graphique complète — couleurs, typographies, guidelines, papeterie." },
-  { icon: 'social', title: 'Social Media', desc: "Posts, stories et bannières optimisés pour chaque plateforme digitale." },
-  { icon: 'packaging', title: 'Packaging', desc: "Design d'emballage attractif qui se distingue en rayon et en ligne." },
-  { icon: 'print', title: 'Print Media', desc: "Affiches, flyers, brochures calibrés pour l'impression professionnelle." },
+  { icon: 'logo', title: 'Logo Design', desc: "Identité visuelle percutante, mémorable, déclinée en tous formats vectoriels.", wa: "Bonjour, je veux un logo pour mon entreprise." },
+  { icon: 'branding', title: 'Branding', desc: "Charte graphique complète — couleurs, typographies, guidelines, papeterie.", wa: "Bonjour, je souhaite une charte graphique complète pour ma marque." },
+  { icon: 'social', title: 'Social Media', desc: "Posts, stories et bannières optimisés pour chaque plateforme digitale.", wa: "Bonjour, j'ai besoin de visuels pour mes réseaux sociaux." },
+  { icon: 'packaging', title: 'Packaging', desc: "Design d'emballage attractif qui se distingue en rayon et en ligne.", wa: "Bonjour, je voudrais un design de packaging pour mes produits." },
+  { icon: 'print', title: 'Print Media', desc: "Affiches, flyers, brochures calibrés pour l'impression professionnelle.", wa: "Bonjour, je souhaite réaliser des supports d'impression (flyers, affiches, etc.)." },
 ]
 
 const SKILLS = [
@@ -754,7 +754,7 @@ function Services({ accent }: { accent: string }) {
                     <p style={{ fontSize: '0.85rem', lineHeight: 1.7, color: 'rgba(223,221,218,0.75)' }}>{svc.desc}</p>
                   </div>
                   <div>
-                    <a href="#commande" style={{
+                    <a href={`https://wa.me/2290192811861?text=${encodeURIComponent(svc.wa)}`} target="_blank" rel="noopener noreferrer" style={{
                       fontFamily: 'Oswald, sans-serif', fontSize: '0.7rem', letterSpacing: '0.12em',
                       padding: '0.5rem 1.25rem', background: accent, color: '#000', textDecoration: 'none',
                       fontWeight: 600, display: 'inline-block', transition: 'opacity 0.2s',
@@ -779,11 +779,20 @@ function Services({ accent }: { accent: string }) {
 function Order({ accent }: { accent: string }) {
   const [sent, setSent] = useState(false)
   const [form, setForm] = useState({
-    name: '', email: '', phone: '', service: '', description: '', budget: '', deadline: '',
+    name: '', email: '', phone: '', service: '', description: '', deadline: '',
   })
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
+    const message = `Bonjour Black Studio, voici une nouvelle commande :
+*Nom :* ${form.name}
+*Email :* ${form.email}
+*Téléphone :* ${form.phone || 'Non renseigné'}
+*Service :* ${form.service}
+*Détails :* ${form.description}
+*Délai :* ${form.deadline || 'Non renseigné'}`
+
+    window.open(`https://wa.me/2290192811861?text=${encodeURIComponent(message)}`, '_blank')
     setSent(true)
   }
 
