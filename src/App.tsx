@@ -12,6 +12,32 @@ const weekArtAfficheImg = new URL('./imports/portfolio/week-art-affiche-officiel
 const blackStudioGrandFormatImg = new URL('./imports/portfolio/black-studio-grand-format.jpg', import.meta.url).href
 const koudiChipsImg = new URL('./imports/portfolio/koudi-chips-etiquette.jpg', import.meta.url).href
 
+// ─── SVG Icons ──────────────────────────────────────────────────────────────
+
+const SVGIcon = ({ type, color = 'currentColor', size = 20 }: { type: string, color?: string, size?: number }) => {
+  const icons: Record<string, JSX.Element> = {
+    logo: <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />,
+    branding: <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />,
+    social: <path d="M18 8a3 3 0 01-3 3c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3zM6 15a3 3 0 01-3 3c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3zM18 19a3 3 0 01-3 3c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3zM8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98" />,
+    packaging: <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16zM3.27 6.96L12 12.01l8.73-5.05M12 22.08V12" />,
+    print: <path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v8H6z" />,
+    email: <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zM22 6l-10 7L2 6" />,
+    phone: <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.89 12.89 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />,
+    linkedin: <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 110 4 2 2 0 010-4z" />,
+    arrowLeft: <path d="M19 12H5M12 19l-7-7 7-7" />,
+    arrowRight: <path d="M5 12h14M12 5l7 7-7 7" />,
+    star: <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />,
+    award: <path d="M12 15l-2 5L9 9l11 4-5 2zm0 0l2 5 3-11-11 4 5 2z" />,
+    briefcase: <rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />,
+  }
+
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+      {icons[type]}
+    </svg>
+  )
+}
+
 // ─── Data ──────────────────────────────────────────────────────────────────
 
 const HERO_POSTERS = [
@@ -33,11 +59,11 @@ const PORTFOLIO_ITEMS = [
 ]
 
 const SERVICES = [
-  { icon: '◈', title: 'Logo Design', price: 'dès 50 000 FCFA', desc: "Identité visuelle percutante, mémorable, déclinée en tous formats vectoriels." },
-  { icon: '◉', title: 'Branding', price: 'dès 150 000 FCFA', desc: "Charte graphique complète — couleurs, typographies, guidelines, papeterie." },
-  { icon: '◍', title: 'Social Media', price: 'dès 30 000 FCFA', desc: "Posts, stories et bannières optimisés pour chaque plateforme digitale." },
-  { icon: '◎', title: 'Packaging', price: 'dès 80 000 FCFA', desc: "Design d'emballage attractif qui se distingue en rayon et en ligne." },
-  { icon: '◐', title: 'Print Media', price: 'dès 40 000 FCFA', desc: "Affiches, flyers, brochures calibrés pour l'impression professionnelle." },
+  { icon: 'logo', title: 'Logo Design', price: 'dès 50 000 FCFA', desc: "Identité visuelle percutante, mémorable, déclinée en tous formats vectoriels." },
+  { icon: 'branding', title: 'Branding', price: 'dès 150 000 FCFA', desc: "Charte graphique complète — couleurs, typographies, guidelines, papeterie." },
+  { icon: 'social', title: 'Social Media', price: 'dès 30 000 FCFA', desc: "Posts, stories et bannières optimisés pour chaque plateforme digitale." },
+  { icon: 'packaging', title: 'Packaging', price: 'dès 80 000 FCFA', desc: "Design d'emballage attractif qui se distingue en rayon et en ligne." },
+  { icon: 'print', title: 'Print Media', price: 'dès 40 000 FCFA', desc: "Affiches, flyers, brochures calibrés pour l'impression professionnelle." },
 ]
 
 const SKILLS = [
@@ -310,7 +336,7 @@ function Hero({ onAccentChange }: { onAccentChange: (c: string) => void }) {
           marginBottom: '1.6rem',
           background: 'rgba(0,0,0,0.1)',
         }}>
-          <span style={{ width: 8, height: 8, display: 'block', borderRadius: '50%', background: accent }} />
+          <SVGIcon type="star" color={accent} size={14} />
           <span style={{ fontFamily: 'Oswald, sans-serif', fontSize: '0.7rem', letterSpacing: '0.18em', color: accent }}>
             {activePoster.badge}
           </span>
@@ -593,16 +619,16 @@ function Portfolio({ accent }: { accent: string }) {
           </div>
           <div style={{ display: 'flex', gap: '0.75rem' }}>
             <button onClick={() => setActive((p) => (p - 1 + total) % total)}
-              style={{ width: 44, height: 44, border: `1px solid rgba(223,221,218,0.2)`, background: 'none', color: '#dfddda', cursor: 'pointer', fontSize: '1rem', transition: 'all 0.3s' }}
+              style={{ width: 44, height: 44, border: `1px solid rgba(223,221,218,0.2)`, background: 'none', color: '#dfddda', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s' }}
               onMouseEnter={(e) => { e.currentTarget.style.borderColor = accent; e.currentTarget.style.color = accent }}
               onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(223,221,218,0.2)'; e.currentTarget.style.color = '#dfddda' }}>
-              ←
+              <SVGIcon type="arrowLeft" size={18} />
             </button>
             <button onClick={() => setActive((p) => (p + 1) % total)}
-              style={{ width: 44, height: 44, border: `1px solid rgba(223,221,218,0.2)`, background: 'none', color: '#dfddda', cursor: 'pointer', fontSize: '1rem', transition: 'all 0.3s' }}
+              style={{ width: 44, height: 44, border: `1px solid rgba(223,221,218,0.2)`, background: 'none', color: '#dfddda', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s' }}
               onMouseEnter={(e) => { e.currentTarget.style.borderColor = accent; e.currentTarget.style.color = accent }}
               onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(223,221,218,0.2)'; e.currentTarget.style.color = '#dfddda' }}>
-              →
+              <SVGIcon type="arrowRight" size={18} />
             </button>
           </div>
         </div>
@@ -709,7 +735,9 @@ function Services({ accent }: { accent: string }) {
                   display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
                   padding: '2rem 1.5rem', textAlign: 'center', transition: 'border-color 0.3s',
                 }}>
-                  <div style={{ fontSize: '2.5rem', color: accent, marginBottom: '1.5rem', lineHeight: 1 }}>{svc.icon}</div>
+                  <div style={{ marginBottom: '1.5rem', color: accent }}>
+                    <SVGIcon type={svc.icon} size={42} color={accent} />
+                  </div>
                   <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 600, fontSize: '1.1rem', letterSpacing: '0.06em', color: '#dfddda', marginBottom: '0.75rem' }}>{svc.title}</div>
                   <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: '0.8rem', color: accent }}>{svc.price}</div>
                   <div style={{ marginTop: 'auto', paddingTop: '1.5rem', fontSize: '0.7rem', color: 'rgba(223,221,218,0.3)', letterSpacing: '0.1em', fontFamily: 'Oswald, sans-serif' }}>CLIQUER ↻</div>
@@ -910,9 +938,9 @@ function Contact({ accent }: { accent: string }) {
 
         <div className="responsive-grid-3" style={{ display: 'grid', gap: '2rem' }}>
           {[
-            { label: 'EMAIL', value: 'rollandkennedy72@gmail.com', link: 'mailto:rollandkennedy72@gmail.com', icon: '✉' },
-            { label: 'TÉLÉPHONE', value: '+229 01 92 87 18 67\n+229 01 61 10 83 03', link: 'tel:+22901928718 67', icon: '☎' },
-            { label: 'LINKEDIN', value: 'Kennedy Rolland', link: '#', icon: 'in' },
+            { label: 'EMAIL', value: 'rollandkennedy72@gmail.com', link: 'mailto:rollandkennedy72@gmail.com', icon: 'email' },
+            { label: 'TÉLÉPHONE', value: '+229 01 92 87 18 67\n+229 01 61 10 83 03', link: 'tel:+22901928718 67', icon: 'phone' },
+            { label: 'LINKEDIN', value: 'Kennedy Rolland', link: '#', icon: 'linkedin' },
           ].map((item, i) => (
             <a key={item.label} data-reveal data-delay={String(i + 1)} href={item.link}
               style={{
@@ -921,7 +949,9 @@ function Contact({ accent }: { accent: string }) {
               }}
               onMouseEnter={(e) => { e.currentTarget.style.borderColor = accent; e.currentTarget.style.background = `${accent}08` }}
               onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(223,221,218,0.08)'; e.currentTarget.style.background = '#0a0a0a' }}>
-              <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: '1.5rem', color: accent, marginBottom: '0.75rem' }}>{item.icon}</div>
+              <div style={{ marginBottom: '0.75rem', color: accent }}>
+                <SVGIcon type={item.icon} size={28} color={accent} />
+              </div>
               <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: '0.65rem', letterSpacing: '0.2em', color: 'rgba(223,221,218,0.4)', marginBottom: '0.5rem' }}>{item.label}</div>
               <div style={{ fontSize: '0.9rem', color: '#dfddda', whiteSpace: 'pre-line' }}>{item.value}</div>
             </a>
