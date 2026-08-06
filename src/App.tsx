@@ -597,7 +597,7 @@ function Portfolio({ accent }: { accent: string }) {
     const abs = Math.abs(offset);
     if (abs > (isMobile ? 1 : 2)) return null;
 
-    const xOffset = isMobile ? 170 : 260;
+    const xOffset = isMobile ? 140 : 260;
 
     return {
       transform: `translateX(${offset * xOffset}px) translateZ(${-abs * 110}px) rotateY(${-offset * 26}deg) scale(${abs === 0 ? 1 : abs === 1 ? 0.84 : 0.68})`,
@@ -635,16 +635,20 @@ function Portfolio({ accent }: { accent: string }) {
 
         {/* 3D Coverflow */}
         <div className="coverflow-container" style={{
-          position: 'relative', height: 420, display: 'flex', alignItems: 'center', justifyContent: 'center',
+          position: 'relative', height: (typeof window !== 'undefined' && window.innerWidth < 600) ? 340 : 420, display: 'flex', alignItems: 'center', justifyContent: 'center',
           perspective: '1400px', perspectiveOrigin: '50% 50%',
         }}>
           {PORTFOLIO_ITEMS.map((item, i) => {
             const style = getCardTransform(i)
             if (!style) return null
             const isActive = i === active
+            const isMobile = typeof window !== 'undefined' && window.innerWidth < 600;
+            const cardW = isMobile ? 220 : 280;
+            const cardH = isMobile ? 300 : 380;
+
             return (
               <div key={item.id} onClick={() => setActive(i)} style={{
-                position: 'absolute', width: 280, height: 380,
+                position: 'absolute', width: cardW, height: cardH,
                 cursor: 'pointer', ...style,
               }}>
                 <div style={{
