@@ -59,11 +59,11 @@ const PORTFOLIO_ITEMS = [
 ]
 
 const SERVICES = [
-  { icon: 'logo', title: 'Logo Design', price: 'dès 50 000 FCFA', desc: "Identité visuelle percutante, mémorable, déclinée en tous formats vectoriels." },
-  { icon: 'branding', title: 'Branding', price: 'dès 150 000 FCFA', desc: "Charte graphique complète — couleurs, typographies, guidelines, papeterie." },
-  { icon: 'social', title: 'Social Media', price: 'dès 30 000 FCFA', desc: "Posts, stories et bannières optimisés pour chaque plateforme digitale." },
-  { icon: 'packaging', title: 'Packaging', price: 'dès 80 000 FCFA', desc: "Design d'emballage attractif qui se distingue en rayon et en ligne." },
-  { icon: 'print', title: 'Print Media', price: 'dès 40 000 FCFA', desc: "Affiches, flyers, brochures calibrés pour l'impression professionnelle." },
+  { icon: 'logo', title: 'Logo Design', desc: "Identité visuelle percutante, mémorable, déclinée en tous formats vectoriels." },
+  { icon: 'branding', title: 'Branding', desc: "Charte graphique complète — couleurs, typographies, guidelines, papeterie." },
+  { icon: 'social', title: 'Social Media', desc: "Posts, stories et bannières optimisés pour chaque plateforme digitale." },
+  { icon: 'packaging', title: 'Packaging', desc: "Design d'emballage attractif qui se distingue en rayon et en ligne." },
+  { icon: 'print', title: 'Print Media', desc: "Affiches, flyers, brochures calibrés pour l'impression professionnelle." },
 ]
 
 const SKILLS = [
@@ -739,7 +739,6 @@ function Services({ accent }: { accent: string }) {
                     <SVGIcon type={svc.icon} size={42} color={accent} />
                   </div>
                   <div style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 600, fontSize: '1.1rem', letterSpacing: '0.06em', color: '#dfddda', marginBottom: '0.75rem' }}>{svc.title}</div>
-                  <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: '0.8rem', color: accent }}>{svc.price}</div>
                   <div style={{ marginTop: 'auto', paddingTop: '1.5rem', fontSize: '0.7rem', color: 'rgba(223,221,218,0.3)', letterSpacing: '0.1em', fontFamily: 'Oswald, sans-serif' }}>CLIQUER ↻</div>
                 </div>
 
@@ -755,7 +754,6 @@ function Services({ accent }: { accent: string }) {
                     <p style={{ fontSize: '0.85rem', lineHeight: 1.7, color: 'rgba(223,221,218,0.75)' }}>{svc.desc}</p>
                   </div>
                   <div>
-                    <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: '0.9rem', color: '#dfddda', marginBottom: '1rem' }}>{svc.price}</div>
                     <a href="#commande" style={{
                       fontFamily: 'Oswald, sans-serif', fontSize: '0.7rem', letterSpacing: '0.12em',
                       padding: '0.5rem 1.25rem', background: accent, color: '#000', textDecoration: 'none',
@@ -880,17 +878,6 @@ function Order({ accent }: { accent: string }) {
                     onFocus={(e) => (e.target.style.borderColor = accent)} onBlur={(e) => (e.target.style.borderColor = 'rgba(223,221,218,0.12)')} />
                 </div>
                 <div className="responsive-grid-2">
-                  <div>
-                    <label style={{ fontFamily: 'Oswald, sans-serif', fontSize: '0.65rem', letterSpacing: '0.15em', color: 'rgba(223,221,218,0.5)', display: 'block', marginBottom: '0.4rem' }}>BUDGET</label>
-                    <select style={{ ...inputStyle, cursor: 'pointer' }} value={form.budget} onChange={(e) => setForm({ ...form, budget: e.target.value })}
-                      onFocus={(e) => (e.target.style.borderColor = accent)} onBlur={(e) => (e.target.style.borderColor = 'rgba(223,221,218,0.12)')}>
-                      <option value="">Estimation...</option>
-                      <option>Moins de 50 000 FCFA</option>
-                      <option>50 000 – 150 000 FCFA</option>
-                      <option>150 000 – 300 000 FCFA</option>
-                      <option>Plus de 300 000 FCFA</option>
-                    </select>
-                  </div>
                   <div>
                     <label style={{ fontFamily: 'Oswald, sans-serif', fontSize: '0.65rem', letterSpacing: '0.15em', color: 'rgba(223,221,218,0.5)', display: 'block', marginBottom: '0.4rem' }}>DÉLAI SOUHAITÉ</label>
                     <select style={{ ...inputStyle, cursor: 'pointer' }} value={form.deadline} onChange={(e) => setForm({ ...form, deadline: e.target.value })}
