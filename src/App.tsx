@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback, type CSSProperties, type FormEvent } from 'react'
 
-const posterImg = new URL('./imports/Affiche_motivation.png', import.meta.url).href
+const posterImg = new URL('./imports/Affiche motivation.png', import.meta.url).href
 const logoVideo = new URL('./imports/logo_animated.mp4', import.meta.url).href
 const presentationVideo = new URL('./imports/videos/black-studio-presentation.mp4', import.meta.url).href
 const closingVideo = new URL('./imports/videos/black-studio-souriez.mp4', import.meta.url).href
@@ -72,34 +72,34 @@ const HERO_POSTERS = [
 ]
 
 const PORTFOLIO_ITEMS = [
-  { id: 0, category: 'PACKAGING', title: 'ÈWA — LE GOÛT DE CHEZ NOUS', year: '2025', tags: ['Packaging', 'Branding'], img: ewaImg },
-  { id: 1, category: 'BRANDING', title: 'BLACK STUDIO — CARTE DE VISITE', year: '2025', tags: ['Identité', 'Print'], img: blackStudioCarteImg },
-  { id: 2, category: 'SOCIAL MEDIA', title: 'WEEKEND ARTISTIQUE — COMPTE À REBOURS', year: '2026', tags: ['Event', 'Instagram'], img: weekendCompteARebourImg },
-  { id: 3, category: 'SOCIAL MEDIA', title: 'ASS. AKOSSIWA — POST MOTIVATION', year: '2025', tags: ['Association', 'Post'], img: akossiwaLundiImg },
-  { id: 4, category: 'PRINT', title: 'WEEK ART — AFFICHE OFFICIELLE', year: '2026', tags: ['Affiche', 'Sponsors'], img: weekArtAfficheImg },
-  { id: 5, category: 'PRINT MEDIA', title: 'BLACK STUDIO — GRAND FORMAT', year: '2025', tags: ['Kakémono', 'Bâche'], img: blackStudioGrandFormatImg },
-  { id: 6, category: 'PACKAGING', title: 'KOUDI CHIPS — ÉTIQUETTE', year: '2025', tags: ['Packaging', 'Label'], img: koudiChipsImg },
-  { id: 7, category: 'DESIGN', title: 'CREATION 1', year: '2025', tags: ['Design'], img: img1 },
-  { id: 8, category: 'DESIGN', title: 'CREATION 2', year: '2025', tags: ['Design'], img: img2 },
-  { id: 9, category: 'DESIGN', title: 'CREATION 3', year: '2025', tags: ['Design'], img: img3 },
-  { id: 10, category: 'DESIGN', title: 'CREATION 4', year: '2025', tags: ['Design'], img: img4 },
-  { id: 11, category: 'PLAN', title: 'PLANNING 1', year: '2025', tags: ['Layout'], img: plan1Img },
-  { id: 12, category: 'LOGO', title: 'LOGO DESIGN 03', year: '2025', tags: ['Logo'], img: logo03Img },
-  { id: 13, category: 'SOCIAL MEDIA', title: 'POST LUNDI 20', year: '2025', tags: ['Post'], img: lundi20Img },
-  { id: 14, category: 'LOGO', title: 'LOGO E2', year: '2025', tags: ['Logo'], img: logoE2Img },
-  { id: 15, category: 'BRANDING', title: 'KOUDI BRUSH', year: '2025', tags: ['Branding'], img: koudiBrushImg },
-  { id: 16, category: 'PRINT', title: 'AFFICHE PUB 4', year: '2025', tags: ['Affiche'], img: affichePub4Img },
-  { id: 17, category: 'LOGO', title: 'LOGO MARATHON', year: '2025', tags: ['Logo'], img: logoMarathonImg },
-  { id: 18, category: 'PRINT', title: 'AFFICHE POTERIE', year: '2025', tags: ['Affiche'], img: affichePoterie2Img },
-  { id: 19, category: 'BRANDING', title: 'TANOUSH LINGERIE 1', year: '2025', tags: ['Branding'], img: tanoush1Img },
-  { id: 20, category: 'BRANDING', title: 'TANOUSH LINGERIE 2', year: '2025', tags: ['Branding'], img: tanoush2Img },
-  { id: 21, category: 'LOGO', title: 'LOGO CURVY\'S DESIGN', year: '2025', tags: ['Logo'], img: logoCurvyImg },
-  { id: 22, category: 'BRANDING', title: 'BRAND TANOUSH', year: '2025', tags: ['Branding'], img: brandTanoushImg },
-  { id: 23, category: 'PRINT', title: 'PACK ABONNEMENTS', year: '2025', tags: ['Affiche'], img: affichePackImg },
-  { id: 24, category: 'LOGO', title: 'LOGO KONDO', year: '2025', tags: ['Logo'], img: logoKondoImg },
-  { id: 25, category: 'PACKAGING', title: 'BOUILLIE DE RIZ', year: '2025', tags: ['Packaging'], img: bouillieImg },
-  { id: 26, category: 'ART', title: 'AI GENERATED', year: '2025', tags: ['Art'], img: geminiImg },
-  { id: 27, category: 'PRINT', title: 'PORCHET SEBA', year: '2025', tags: ['Affiche'], img: porchetSebaImg },
+  { id: 0, category: 'PACKAGING', title: 'ÈWA — LE GOÛT DE CHEZ NOUS', tags: ['Packaging', 'Branding'], img: ewaImg },
+  { id: 1, category: 'BRANDING', title: 'BLACK STUDIO — CARTE DE VISITE', tags: ['Identité', 'Print'], img: blackStudioCarteImg },
+  { id: 2, category: 'SOCIAL MEDIA', title: 'WEEKEND ARTISTIQUE — COMPTE À REBOURS', tags: ['Event', 'Instagram'], img: weekendCompteARebourImg },
+  { id: 3, category: 'SOCIAL MEDIA', title: 'ASS. AKOSSIWA — POST MOTIVATION', tags: ['Association', 'Post'], img: akossiwaLundiImg },
+  { id: 4, category: 'PRINT', title: 'WEEK ART — AFFICHE OFFICIELLE', tags: ['Affiche', 'Sponsors'], img: weekArtAfficheImg },
+  { id: 5, category: 'PRINT MEDIA', title: 'BLACK STUDIO — GRAND FORMAT', tags: ['Kakémono', 'Bâche'], img: blackStudioGrandFormatImg },
+  { id: 6, category: 'PACKAGING', title: 'KOUDI CHIPS — ÉTIQUETTE', tags: ['Packaging', 'Label'], img: koudiChipsImg },
+  { id: 7, category: 'DESIGN', title: 'CREATION 1', tags: ['Design'], img: img1 },
+  { id: 8, category: 'DESIGN', title: 'CREATION 2', tags: ['Design'], img: img2 },
+  { id: 9, category: 'DESIGN', title: 'CREATION 3', tags: ['Design'], img: img3 },
+  { id: 10, category: 'DESIGN', title: 'CREATION 4', tags: ['Design'], img: img4 },
+  { id: 11, category: 'PLAN', title: 'PLANNING 1', tags: ['Layout'], img: plan1Img },
+  { id: 12, category: 'LOGO', title: 'LOGO DESIGN 03', tags: ['Logo'], img: logo03Img },
+  { id: 13, category: 'SOCIAL MEDIA', title: 'POST LUNDI 20', tags: ['Post'], img: lundi20Img },
+  { id: 14, category: 'LOGO', title: 'LOGO E2', tags: ['Logo'], img: logoE2Img },
+  { id: 15, category: 'BRANDING', title: 'KOUDI BRUSH', tags: ['Branding'], img: koudiBrushImg },
+  { id: 16, category: 'PRINT', title: 'AFFICHE PUB 4', tags: ['Affiche'], img: affichePub4Img },
+  { id: 17, category: 'LOGO', title: 'LOGO MARATHON', tags: ['Logo'], img: logoMarathonImg },
+  { id: 18, category: 'PRINT', title: 'AFFICHE POTERIE', tags: ['Affiche'], img: affichePoterie2Img },
+  { id: 19, category: 'BRANDING', title: 'TANOUSH LINGERIE 1', tags: ['Branding'], img: tanoush1Img },
+  { id: 20, category: 'BRANDING', title: 'TANOUSH LINGERIE 2', tags: ['Branding'], img: tanoush2Img },
+  { id: 21, category: 'LOGO', title: 'LOGO CURVY\'S DESIGN', tags: ['Logo'], img: logoCurvyImg },
+  { id: 22, category: 'BRANDING', title: 'BRAND TANOUSH', tags: ['Branding'], img: brandTanoushImg },
+  { id: 23, category: 'PRINT', title: 'PACK ABONNEMENTS', tags: ['Affiche'], img: affichePackImg },
+  { id: 24, category: 'LOGO', title: 'LOGO KONDO', tags: ['Logo'], img: logoKondoImg },
+  { id: 25, category: 'PACKAGING', title: 'BOUILLIE DE RIZ', tags: ['Packaging'], img: bouillieImg },
+  { id: 26, category: 'ART', title: 'AI GENERATED', tags: ['Art'], img: geminiImg },
+  { id: 27, category: 'PRINT', title: 'PORCHET SEBA', tags: ['Affiche'], img: porchetSebaImg },
 ]
 
 const SERVICES = [
@@ -737,7 +737,6 @@ function Portfolio({ accent }: { accent: string }) {
                           <span key={tag} style={{ fontSize: '0.65rem', padding: '0.2rem 0.5rem', background: `${accent}22`, color: accent, fontFamily: 'Oswald, sans-serif', letterSpacing: '0.08em' }}>{tag}</span>
                         ))}
                       </div>
-                      <span style={{ fontSize: '0.75rem', color: 'rgba(223,221,218,0.4)', fontFamily: 'Oswald, sans-serif' }}>{item.year}</span>
                     </div>
                   )}
                 </div>
