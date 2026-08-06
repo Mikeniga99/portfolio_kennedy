@@ -628,12 +628,14 @@ function About({ accent }: { accent: string }) {
 
 function Portfolio({ accent }: { accent: string }) {
   const [active, setActive] = useState(0)
+  const [isPaused, setIsPaused] = useState(false)
   const total = PORTFOLIO_ITEMS.length
 
   useEffect(() => {
-    const t = setInterval(() => setActive((p) => (p + 1) % total), 3000)
+    if (isPaused) return
+    const t = setInterval(() => setActive((p) => (p + 1) % total), 4500)
     return () => clearInterval(t)
-  }, [total])
+  }, [total, isPaused])
 
   const getCardTransform = (i: number) => {
     const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
@@ -691,24 +693,41 @@ function Portfolio({ accent }: { accent: string }) {
             const cardH = isMobile ? 300 : 380;
 
             return (
-              <div key={item.id} onClick={() => setActive(i)} style={{
-                position: 'absolute', width: cardW, height: cardH,
-                cursor: 'pointer', ...style,
-              }}>
+              <div key={item.id}
+                onClick={() => setActive(i)}
+                onMouseDown={() => setIsPaused(true)}
+                onMouseUp={() => setIsPaused(false)}
+                onMouseLeave={() => setIsPaused(false)}
+                onTouchStart={() => setIsPaused(true)}
+                onTouchEnd={() => setIsPaused(false)}
+                style={{
+                  position: 'absolute', width: cardW, height: cardH,
+                  cursor: 'pointer', ...style,
+                }}>
                 <div style={{
                   width: '100%', height: '100%', overflow: 'hidden', position: 'relative',
                   boxShadow: isActive ? `0 0 40px ${accent}55, 0 20px 60px rgba(0,0,0,0.8)` : '0 10px 30px rgba(0,0,0,0.6)',
                   transition: 'box-shadow 0.6s',
+                  background: '#0a0a0a',
+                  padding: '8px',
+                  boxSizing: 'border-box',
+                  border: `1px solid ${isActive ? accent + '44' : 'rgba(223,221,218,0.08)'}`,
                 }}>
                   <img src={item.img} alt={item.title}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                    style={{
+                      width: '100%', height: '100%',
+                      objectFit: 'cover',
+                      display: 'block',
+                      borderRadius: '2px'
+                    }} />
                   <div style={{
-                    position: 'absolute', inset: 0,
+                    position: 'absolute', inset: 8,
                     background: isActive ? `linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)` : 'rgba(0,0,0,0.5)',
                     transition: 'background 0.5s',
+                    borderRadius: '2px'
                   }} />
                   {isActive && (
-                    <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1.5rem' }}>
+                    <div style={{ position: 'absolute', bottom: 8, left: 8, right: 8, padding: '1.2rem' }}>
                       <span style={{ fontFamily: 'Oswald, sans-serif', fontSize: '0.65rem', letterSpacing: '0.18em', color: accent, display: 'block', marginBottom: '0.4rem' }}>
                         {item.category}
                       </span>
