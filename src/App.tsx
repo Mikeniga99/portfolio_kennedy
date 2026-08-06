@@ -144,11 +144,11 @@ function Nav({ accent }: { accent: string }) {
   return (
     <>
       <nav style={{
-        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 200,
-        background: scrolled ? 'rgba(0,0,0,0.94)' : 'rgba(0,0,0,0.6)',
+        position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 9999,
+        background: scrolled ? 'rgba(0,0,0,0.98)' : 'rgba(0,0,0,0.8)',
         backdropFilter: 'blur(20px)',
         borderBottom: `1px solid ${accent}28`,
-        transition: 'all 0.5s ease',
+        transition: 'all 0.4s ease',
       }}>
         <div className="section-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 68 }}>
           {/* Logo */}
