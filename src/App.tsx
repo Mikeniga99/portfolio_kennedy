@@ -510,24 +510,22 @@ function About({ accent }: { accent: string }) {
 
           {/* Skills */}
           <div>
-            <h3 data-reveal style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 600, fontSize: '0.7rem', letterSpacing: '0.2em', color: 'rgba(223,221,218,0.4)', marginBottom: '1.5rem' }}>LOGICIELS</h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-              {SKILLS.map((skill, i) => (
-                <div key={skill.name} data-reveal data-delay={String(i + 1)}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.4rem' }}>
-                    <span style={{ fontFamily: 'Oswald, sans-serif', fontSize: '0.85rem', letterSpacing: '0.08em', color: '#dfddda' }}>{skill.name}</span>
-                    <span style={{ fontFamily: 'Oswald, sans-serif', fontSize: '0.75rem', color: accent }}>{skill.level}%</span>
-                  </div>
-                  <div style={{ height: 2, background: 'rgba(223,221,218,0.12)', overflow: 'hidden' }}>
-                    <div className="skill-bar-fill" data-level={skill.level} />
-                  </div>
-                </div>
+            <h3 data-reveal style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 600, fontSize: '0.7rem', letterSpacing: '0.2em', color: 'rgba(223,221,218,0.4)', marginBottom: '1.2rem' }}>LOGICIELS</h3>
+            <div data-reveal data-delay="1" style={{ display: 'flex', gap: '0.7rem', flexWrap: 'wrap' }}>
+              {SKILLS.map((skill) => (
+                <span key={skill.name} style={{
+                  fontFamily: 'Oswald, sans-serif', fontSize: '0.8rem', letterSpacing: '0.05em',
+                  color: '#dfddda', padding: '0.4rem 0.9rem', border: '1px solid rgba(223,221,218,0.12)',
+                  background: 'rgba(255,255,255,0.02)'
+                }}>
+                  {skill.name}
+                </span>
               ))}
             </div>
 
             {/* Education */}
-            <div data-reveal data-delay="2" style={{ marginTop: '3.5rem' }}>
-              <h3 style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 600, fontSize: '0.7rem', letterSpacing: '0.2em', color: 'rgba(223,221,218,0.4)', marginBottom: '1.5rem' }}>FORMATION</h3>
+            <div data-reveal data-delay="2" style={{ marginTop: '2.5rem' }}>
+              <h3 style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 600, fontSize: '0.7rem', letterSpacing: '0.2em', color: 'rgba(223,221,218,0.4)', marginBottom: '1.2rem' }}>FORMATION</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <div style={{ borderLeft: `2px solid ${accent}`, paddingLeft: '1rem' }}>
                   <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: '0.9rem', color: '#dfddda' }}>Maintenance Informatique & Graphisme</div>
