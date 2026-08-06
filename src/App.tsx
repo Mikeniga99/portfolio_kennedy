@@ -986,24 +986,13 @@ function ClosingVideo({ accent }: { accent: string }) {
 
 // ─── Footer ───────────────────────────────────────────────────────────────
 
-function Footer({ accent }: { accent: string }) {
+function Footer() {
   return (
-    <footer style={{ padding: '2.5rem 0', borderTop: '1px solid rgba(223,221,218,0.08)', background: '#000' }}>
-      <div className="section-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-          <video src={logoVideo} autoPlay muted loop playsInline style={{ height: 32, width: 'auto', objectFit: 'contain' }} />
-          <span style={{ fontFamily: 'Oswald, sans-serif', fontWeight: 700, fontSize: '0.9rem', letterSpacing: '0.1em', color: '#dfddda' }}>
-            BLACK<span style={{ color: accent }}>STUDIO</span>
-          </span>
-        </div>
-        <span style={{ fontFamily: 'Oswald, sans-serif', fontSize: '0.7rem', letterSpacing: '0.1em', color: 'rgba(223,221,218,0.3)' }}>
-          © 2025 — SOSSOU KENNEDY · GRAPHISTE DESIGNER · BÉNIN
+    <footer style={{ padding: '3rem 0', borderTop: '1px solid rgba(223,221,218,0.08)', background: '#000', textAlign: 'center' }}>
+      <div className="section-container">
+        <span style={{ fontFamily: 'Oswald, sans-serif', fontSize: '0.8rem', letterSpacing: '0.15em', color: 'rgba(223,221,218,0.4)', textTransform: 'uppercase' }}>
+          copyright 2026 MiDIGITAL
         </span>
-        <div style={{ display: 'flex', gap: '1.5rem' }}>
-          {['LOGO', 'BRANDING', 'SOCIAL', 'PACKAGING', 'PRINT'].map((cat) => (
-            <span key={cat} style={{ fontFamily: 'Oswald, sans-serif', fontSize: '0.62rem', letterSpacing: '0.14em', color: 'rgba(223,221,218,0.3)' }}>{cat}</span>
-          ))}
-        </div>
       </div>
     </footer>
   )
@@ -1026,7 +1015,7 @@ export default function App() {
       <Order accent={accent} />
       <Contact accent={accent} />
       <ClosingVideo accent={accent} />
-      <Footer accent={accent} />
+      <Footer />
     </div>
   )
 }
