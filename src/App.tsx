@@ -890,7 +890,7 @@ function Order({ accent }: { accent: string }) {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               {[
                 { label: 'EMAIL', value: 'rollandkennedy72@gmail.com' },
-                { label: 'TÉLÉPHONE', value: '+229 01 92 87 18 67' },
+                { label: 'TÉLÉPHONE', value: '+229 01 92 81 18 61' },
                 { label: 'DISPONIBILITÉ', value: 'Contrat · Freelance · Commande' },
               ].map((item) => (
                 <div key={item.label}>
