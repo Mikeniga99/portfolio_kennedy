@@ -13,27 +13,7 @@ const blackStudioGrandFormatImg = new URL('./imports/portfolio/black-studio-gran
 const koudiChipsImg = new URL('./imports/portfolio/koudi-chips-etiquette.jpg', import.meta.url).href
 
 // Nouvelles images
-const img1 = new URL('./imports/portfolio/1.jpg', import.meta.url).href
-const img2 = new URL('./imports/portfolio/2.jpg', import.meta.url).href
-const img3 = new URL('./imports/portfolio/3.jpg', import.meta.url).href
-const img4 = new URL('./imports/portfolio/4.jpg', import.meta.url).href
-const plan1Img = new URL('./imports/portfolio/Plan1.png', import.meta.url).href
-const logo03Img = new URL('./imports/portfolio/Logo-03.png', import.meta.url).href
-const lundi20Img = new URL('./imports/portfolio/Lundi 20.png', import.meta.url).href
-const logoE2Img = new URL('./imports/portfolio/Logo E2-01.png', import.meta.url).href
-const koudiBrushImg = new URL('./imports/portfolio/Koudi Brush.png', import.meta.url).href
-const affichePub4Img = new URL('./imports/portfolio/Affiche Pub 4.jpg', import.meta.url).href
-const logoMarathonImg = new URL('./imports/portfolio/Logo Marathon-01.jpg', import.meta.url).href
-const affichePoterie2Img = new URL('./imports/portfolio/Affiche poterie 2.png', import.meta.url).href
-const tanoush1Img = new URL('./imports/portfolio/Tanoush Lingerie-01.png', import.meta.url).href
-const tanoush2Img = new URL('./imports/portfolio/Tanoush Lingerie-02.png', import.meta.url).href
-const logoCurvyImg = new URL('./imports/portfolio/logo Curvy\'s Design-01.jpg', import.meta.url).href
-const brandTanoushImg = new URL('./imports/portfolio/Brand Tanoush Lingeries.jpg', import.meta.url).href
-const affichePackImg = new URL('./imports/portfolio/Affiche Pack et Abonnemments.jpg', import.meta.url).href
-const logoKondoImg = new URL('./imports/portfolio/Logo Kondo_Plan de travail 1.png', import.meta.url).href
-const bouillieImg = new URL('./imports/portfolio/Bouillie de RIz_Plan de travail 1.jpg', import.meta.url).href
-const geminiImg = new URL('./imports/portfolio/Gemini_Generated_Image_xsqs96xsqs96xsqs.png', import.meta.url).href
-const porchetSebaImg = new URL('./imports/portfolio/Porchet Seba_Plan de travail 1_Plan de travail 1_Plan de travail 1.png', import.meta.url).href
+
 
 // ─── SVG Icons ──────────────────────────────────────────────────────────────
 
@@ -72,34 +52,34 @@ const HERO_POSTERS = [
 ]
 
 const PORTFOLIO_ITEMS = [
-  { id: 0, category: 'PACKAGING', title: 'ewa.png', tags: ['Packaging', 'Branding'], img: ewaImg },
-  { id: 1, category: 'BRANDING', title: 'black-studio-carte.png', tags: ['Identité', 'Print'], img: blackStudioCarteImg },
-  { id: 2, category: 'SOCIAL MEDIA', title: 'Affiche Compte a rebours.png', tags: ['Event', 'Instagram'], img: weekendCompteARebourImg },
-  { id: 3, category: 'SOCIAL MEDIA', title: 'Affiche Lundi.jpg', tags: ['Association', 'Post'], img: akossiwaLundiImg },
-  { id: 4, category: 'PRINT', title: 'Affiche offi avec les logos.png', tags: ['Affiche', 'Sponsors'], img: weekArtAfficheImg },
-  { id: 5, category: 'PRINT MEDIA', title: 'black-studio-grand-format.jpg', tags: ['Kakémono', 'Bâche'], img: blackStudioGrandFormatImg },
-  { id: 6, category: 'PACKAGING', title: 'koudi-chips-etiquette.jpg', tags: ['Packaging', 'Label'], img: koudiChipsImg },
-  { id: 7, category: 'DESIGN', title: '1.jpg', tags: ['Design'], img: img1 },
-  { id: 8, category: 'DESIGN', title: '2.jpg', tags: ['Design'], img: img2 },
-  { id: 9, category: 'DESIGN', title: '3.jpg', tags: ['Design'], img: img3 },
-  { id: 10, category: 'DESIGN', title: '4.jpg', tags: ['Design'], img: img4 },
-  { id: 11, category: 'PLAN', title: 'Plan1.png', tags: ['Layout'], img: plan1Img },
-  { id: 12, category: 'LOGO', title: 'Logo-03.png', tags: ['Logo'], img: logo03Img },
-  { id: 13, category: 'SOCIAL MEDIA', title: 'Lundi 20.png', tags: ['Post'], img: lundi20Img },
-  { id: 14, category: 'LOGO', title: 'Logo E2-01.png', tags: ['Logo'], img: logoE2Img },
-  { id: 15, category: 'BRANDING', title: 'Koudi Brush.png', tags: ['Branding'], img: koudiBrushImg },
-  { id: 16, category: 'PRINT', title: 'Affiche Pub 4.jpg', tags: ['Affiche'], img: affichePub4Img },
-  { id: 17, category: 'LOGO', title: 'Logo Marathon-01.jpg', tags: ['Logo'], img: logoMarathonImg },
-  { id: 18, category: 'PRINT', title: 'Affiche poterie 2.png', tags: ['Affiche'], img: affichePoterie2Img },
-  { id: 19, category: 'BRANDING', title: 'Tanoush Lingerie-01.png', tags: ['Branding'], img: tanoush1Img },
-  { id: 20, category: 'BRANDING', title: 'Tanoush Lingerie-02.png', tags: ['Branding'], img: tanoush2Img },
-  { id: 21, category: 'LOGO', title: 'logo Curvy\'s Design-01.jpg', tags: ['Logo'], img: logoCurvyImg },
-  { id: 22, category: 'BRANDING', title: 'Brand Tanoush Lingeries.jpg', tags: ['Branding'], img: brandTanoushImg },
-  { id: 23, category: 'PRINT', title: 'Affiche Pack et Abonnemments.jpg', tags: ['Affiche'], img: affichePackImg },
-  { id: 24, category: 'LOGO', title: 'Logo Kondo_Plan de travail 1.png', tags: ['Logo'], img: logoKondoImg },
-  { id: 25, category: 'PACKAGING', title: 'Bouillie de RIz_Plan de travail 1.jpg', tags: ['Packaging'], img: bouillieImg },
-  { id: 26, category: 'ART', title: 'Gemini_Generated_Image_xsqs96xsqs96xsqs.png', tags: ['Art'], img: geminiImg },
-  { id: 27, category: 'PRINT', title: 'Porchet Seba_Plan de travail 1_Plan de travail 1_Plan de travail 1.png', tags: ['Affiche'], img: porchetSebaImg },
+  { id: 0, category: 'PACKAGING', title: 'ewa', tags: ['Packaging', 'Branding'], img: ewaImg },
+  { id: 1, category: 'BRANDING', title: 'black-studio-carte', tags: ['Identité', 'Print'], img: blackStudioCarteImg },
+  { id: 2, category: 'SOCIAL MEDIA', title: 'Affiche Compte a rebours', tags: ['Event', 'Instagram'], img: weekendCompteARebourImg },
+  { id: 3, category: 'SOCIAL MEDIA', title: 'Affiche Lundi', tags: ['Association', 'Post'], img: akossiwaLundiImg },
+  { id: 4, category: 'PRINT', title: 'Affiche offi avec les logos', tags: ['Affiche', 'Sponsors'], img: weekArtAfficheImg },
+  { id: 5, category: 'PRINT MEDIA', title: 'black-studio-grand-format', tags: ['Kakémono', 'Bâche'], img: blackStudioGrandFormatImg },
+  { id: 6, category: 'PACKAGING', title: 'koudi-chips-etiquette', tags: ['Packaging', 'Label'], img: koudiChipsImg },
+  { id: 7, category: 'DESIGN', title: '1', tags: ['Design'], img: img1 },
+  { id: 8, category: 'DESIGN', title: '2', tags: ['Design'], img: img2 },
+  { id: 9, category: 'DESIGN', title: '3', tags: ['Design'], img: img3 },
+  { id: 10, category: 'DESIGN', title: '4', tags: ['Design'], img: img4 },
+  { id: 11, category: 'PLAN', title: 'Plan1', tags: ['Layout'], img: plan1Img },
+  { id: 12, category: 'LOGO', title: 'Logo-03', tags: ['Logo'], img: logo03Img },
+  { id: 13, category: 'SOCIAL MEDIA', title: 'Lundi 20', tags: ['Post'], img: lundi20Img },
+  { id: 14, category: 'LOGO', title: 'Logo E2-01', tags: ['Logo'], img: logoE2Img },
+  { id: 15, category: 'BRANDING', title: 'Koudi Brush', tags: ['Branding'], img: koudiBrushImg },
+  { id: 16, category: 'PRINT', title: 'Affiche Pub 4', tags: ['Affiche'], img: affichePub4Img },
+  { id: 17, category: 'LOGO', title: 'Logo Marathon-01', tags: ['Logo'], img: logoMarathonImg },
+  { id: 18, category: 'PRINT', title: 'Affiche poterie 2', tags: ['Affiche'], img: affichePoterie2Img },
+  { id: 19, category: 'BRANDING', title: 'Tanoush Lingerie-01', tags: ['Branding'], img: tanoush1Img },
+  { id: 20, category: 'BRANDING', title: 'Tanoush Lingerie-02', tags: ['Branding'], img: tanoush2Img },
+  { id: 21, category: 'LOGO', title: 'logo Curvy\'s Design-01', tags: ['Logo'], img: logoCurvyImg },
+  { id: 22, category: 'BRANDING', title: 'Brand Tanoush Lingeries', tags: ['Branding'], img: brandTanoushImg },
+  { id: 23, category: 'PRINT', title: 'Affiche Pack et Abonnemments', tags: ['Affiche'], img: affichePackImg },
+  { id: 24, category: 'LOGO', title: 'Logo Kondo_Plan de travail 1', tags: ['Logo'], img: logoKondoImg },
+  { id: 25, category: 'PACKAGING', title: 'Bouillie de RIz_Plan de travail 1', tags: ['Packaging'], img: bouillieImg },
+  { id: 26, category: 'ART', title: 'Gemini_Generated_Image_xsqs96xsqs96xsqs', tags: ['Art'], img: geminiImg },
+  { id: 27, category: 'PRINT', title: 'Porchet Seba_Plan de travail 1_Plan de travail 1_Plan de travail 1', tags: ['Affiche'], img: porchetSebaImg },
 ]
 
 const SERVICES = [
