@@ -1,40 +1,39 @@
 import { useState, useEffect, useRef, useCallback, type CSSProperties, type FormEvent } from 'react'
 
-const logoVideo = new URL('./imports/logo animated.mp4', import.meta.url).href
-const presentationVideo = new URL('./imports/videos/Firefly Créer une vidéo publicitaire premium de 30 à 45 secondes pour BLACK STUDIO, une agence créat.mp4', import.meta.url).href
-const closingVideo = new URL('./imports/videos/2358670007.mp4', import.meta.url).href
+const posterImg = new URL('./imports/Affiche motivation.png', import.meta.url).href
+const logoVideo = new URL('./imports/logo_animated.mp4', import.meta.url).href
+const presentationVideo = new URL('./imports/videos/black-studio-presentation.mp4', import.meta.url).href
+const closingVideo = new URL('./imports/videos/black-studio-souriez.mp4', import.meta.url).href
 
-// Portfolio Imports
-const ewaImg = new URL('./imports/portfolio/Ewa.png', import.meta.url).href
-const logoTibImg = new URL('./imports/portfolio/Logo TIB.png', import.meta.url).href
-const weekArtImg = new URL('./imports/portfolio/Week Art.png', import.meta.url).href
-const logoKondoImg = new URL('./imports/portfolio/Logo Kondo.png', import.meta.url).href
-const sebaVoyageImg = new URL('./imports/portfolio/SEBA Voyage.png', import.meta.url).href
-const blackStudioImg = new URL('./imports/portfolio/Black Studio.jpg', import.meta.url).href
+// Nouvelles images
+const afficheCompteARebourImg = new URL('./imports/portfolio/Affiche Compte a rebours.png', import.meta.url).href
 const afficheLundiImg = new URL('./imports/portfolio/Affiche Lundi.jpg', import.meta.url).href
-const logoCurvysImg = new URL('./imports/portfolio/logo Curvy\'s .jpg', import.meta.url).href
-const brandingYaourtImg = new URL('./imports/portfolio/Branding Yaourt.jpg', import.meta.url).href
-const carteVisiteImg = new URL('./imports/portfolio/Carte de visite.png', import.meta.url).href
-const etiquetteChipsImg = new URL('./imports/portfolio/Etiquette chips.jpg', import.meta.url).href
-const affichePoterieImg = new URL('./imports/portfolio/Affiche poterie .png', import.meta.url).href
-const brandingBoissonImg = new URL('./imports/portfolio/Branding Boisson.jpg', import.meta.url).href
-const lundiMotivationImg = new URL('./imports/portfolio/Lundi Motivation.png', import.meta.url).href
-const tanoushLingerieImg = new URL('./imports/portfolio/Tanoush Lingerie.png', import.meta.url).href
-const bacheSebaImg = new URL('./imports/portfolio/Bache SEBA Voyage.jpg', import.meta.url).href
-const brandingSandwichImg = new URL('./imports/portfolio/Branding Sandwich.jpg', import.meta.url).href
 const afficheMotivationImg = new URL('./imports/portfolio/Affiche motivation.png', import.meta.url).href
-const logoReineCoiffureImg = new URL('./imports/portfolio/Logo Reine Coiffure.png', import.meta.url).href
-const porchetSebaImg = new URL('./imports/portfolio/Porchet SEBA Voyage.png', import.meta.url).href
-const brandingKoudiBrushImg = new URL('./imports/portfolio/Branding Koudi Brush.png', import.meta.url).href
-const logoMarathonImg = new URL('./imports/portfolio/Logo Marathon-Akossiwa.jpg', import.meta.url).href
-const tanoushLingerieBlackImg = new URL('./imports/portfolio/Tanoush Lingerie Black.png', import.meta.url).href
+const affichePoterieImg = new URL('./imports/portfolio/Affiche poterie .png', import.meta.url).href
+const bacheSebaVoyageImg = new URL('./imports/portfolio/Bache SEBA Voyage.jpg', import.meta.url).href
+const blackStudioImg = new URL('./imports/portfolio/Black Studio.jpg', import.meta.url).href
+const bouillieRizImg = new URL('./imports/portfolio/Bouillie de RIz_Plan de travail 1.jpg', import.meta.url).href
 const brandTanoushImg = new URL('./imports/portfolio/Brand Tanoush Lingeries.jpg', import.meta.url).href
-const afficheCompteAReboursImg = new URL('./imports/portfolio/Affiche Compte a rebours.png', import.meta.url).href
-const brandingSaladeFruitsImg = new URL('./imports/portfolio/Branding Salade de fruits.jpg', import.meta.url).href
-const affichePackImg = new URL('./imports/portfolio/Affiche Pack et Abonnemments.jpg', import.meta.url).href
-const brandingKendricksImg = new URL('./imports/portfolio/Branding Kendrick\'s Collection.jpeg', import.meta.url).href
-const bouillieImg = new URL('./imports/portfolio/Bouillie de RIz_Plan de travail 1.jpg', import.meta.url).href
-
+const brandingBoissonImg = new URL('./imports/portfolio/Branding Boisson.jpg', import.meta.url).href
+const brandingKendricksImg = new URL("./imports/portfolio/Branding Kendrick's Collection.jpeg", import.meta.url).href
+const brandingKoudiBrushImg = new URL('./imports/portfolio/Branding Koudi Brush.png', import.meta.url).href
+const brandingSaladeDeFruitsImg = new URL('./imports/portfolio/Branding Salade de fruits.jpg', import.meta.url).href
+const brandingSandwichImg = new URL('./imports/portfolio/Branding Sandwich.jpg', import.meta.url).href
+const brandingYaourtImg = new URL('./imports/portfolio/Branding Yaourt.jpg', import.meta.url).href
+const carteDeVisiteImg = new URL('./imports/portfolio/Carte de visite.png', import.meta.url).href
+const etiquetteChipsImg = new URL('./imports/portfolio/Etiquette chips.jpg', import.meta.url).href
+const ewaImg = new URL('./imports/portfolio/Ewa.png', import.meta.url).href
+const logoCurvyImg = new URL("./imports/portfolio/logo Curvy's .jpg", import.meta.url).href
+const logoKondoImg = new URL('./imports/portfolio/Logo Kondo.png', import.meta.url).href
+const logoMarathonImg = new URL('./imports/portfolio/Logo Marathon-Akossiwa.jpg', import.meta.url).href
+const logoReineCoiffureImg = new URL('./imports/portfolio/Logo Reine Coiffure.png', import.meta.url).href
+const logoTibImg = new URL('./imports/portfolio/Logo TIB.png', import.meta.url).href
+const lundiMotivationImg = new URL('./imports/portfolio/Lundi Motivation.png', import.meta.url).href
+const porchetSebaVoyageImg = new URL('./imports/portfolio/Porchet SEBA Voyage.png', import.meta.url).href
+const sebaVoyageImg = new URL('./imports/portfolio/SEBA Voyage.png', import.meta.url).href
+const tanoushLingerieBlackImg = new URL('./imports/portfolio/Tanoush Lingerie Black.png', import.meta.url).href
+const tanoushLingerieImg = new URL('./imports/portfolio/Tanoush Lingerie.png', import.meta.url).href
+const weekArtImg = new URL('./imports/portfolio/Week Art.png', import.meta.url).href
 // ─── SVG Icons ──────────────────────────────────────────────────────────────
 
 const SVGIcon = ({ type, color = 'currentColor', size = 20 }: { type: string, color?: string, size?: number }) => {
@@ -64,44 +63,45 @@ const SVGIcon = ({ type, color = 'currentColor', size = 20 }: { type: string, co
 // ─── Data ──────────────────────────────────────────────────────────────────
 
 const HERO_POSTERS = [
-  { id: 0, category: '01 — SOCIAL MEDIA', badge: 'SOCIAL MEDIA DESIGN', title: 'Kennedy Rolland', accent: '#FF6B35', highlight: 'GRAPHISTE DESIGNER', image: sebaVoyageImg },
+  { id: 0, category: '01 — SOCIAL MEDIA', badge: 'SOCIAL MEDIA DESIGN', title: 'Kennedy Rolland', accent: '#FF6B35', highlight: 'GRAPHISTE DESIGNER', image: afficheCompteARebourImg },
   { id: 1, category: '02 — BRANDING', badge: 'BRANDING DESIGN', title: 'Black Studio', accent: '#FFFFFF', highlight: 'IDENTITÉ VISUELLE', image: blackStudioImg },
   { id: 2, category: '03 — PACKAGING', badge: 'PACKAGING DESIGN', title: 'Èwa', accent: '#FF6B35', highlight: 'PACKAGING', image: ewaImg },
   { id: 3, category: '04 — PRINT', badge: 'PRINT MEDIA', title: 'Week Art', accent: '#FFFFFF', highlight: 'PRINT DESIGN', image: weekArtImg },
   { id: 4, category: '05 — COMMUNICATION', badge: 'COMMUNICATION VISUELLE', title: 'Akossiwa', accent: '#FF6B35', highlight: 'SOCIAL MEDIA', image: afficheLundiImg },
 ]
 
-const PORTFOLIO_ITEMS = [
-  { id: 0, category: 'PACKAGING', title: 'Ewa', tags: ['Packaging', 'Branding'], img: ewaImg },
-  { id: 1, category: 'LOGO', title: 'Logo TIB', tags: ['Logo'], img: logoTibImg },
-  { id: 2, category: 'PRINT', title: 'Week Art', tags: ['Print'], img: weekArtImg },
-  { id: 3, category: 'LOGO', title: 'Logo Kondo', tags: ['Logo'], img: logoKondoImg },
-  { id: 4, category: 'PRINT', title: 'SEBA Voyage', tags: ['Print'], img: sebaVoyageImg },
-  { id: 5, category: 'BRANDING', title: 'Black Studio', tags: ['Branding'], img: blackStudioImg },
-  { id: 6, category: 'SOCIAL MEDIA', title: 'Affiche Lundi', tags: ['Social Media'], img: afficheLundiImg },
-  { id: 7, category: 'LOGO', title: 'logo Curvy\'s', tags: ['Logo'], img: logoCurvysImg },
-  { id: 8, category: 'BRANDING', title: 'Branding Yaourt', tags: ['Branding'], img: brandingYaourtImg },
-  { id: 9, category: 'BRANDING', title: 'Carte de visite', tags: ['Branding'], img: carteVisiteImg },
-  { id: 10, category: 'PACKAGING', title: 'Etiquette chips', tags: ['Packaging'], img: etiquetteChipsImg },
-  { id: 11, category: 'PRINT', title: 'Affiche poterie', tags: ['Print'], img: affichePoterieImg },
-  { id: 12, category: 'BRANDING', title: 'Branding Boisson', tags: ['Branding'], img: brandingBoissonImg },
-  { id: 13, category: 'SOCIAL MEDIA', title: 'Lundi Motivation', tags: ['Social Media'], img: lundiMotivationImg },
-  { id: 14, category: 'BRANDING', title: 'Tanoush Lingerie', tags: ['Branding'], img: tanoushLingerieImg },
-  { id: 15, category: 'PRINT', title: 'Bache SEBA Voyage', tags: ['Print'], img: bacheSebaImg },
-  { id: 16, category: 'BRANDING', title: 'Branding Sandwich', tags: ['Branding'], img: brandingSandwichImg },
-  { id: 17, category: 'SOCIAL MEDIA', title: 'Affiche motivation', tags: ['Social Media'], img: afficheMotivationImg },
-  { id: 18, category: 'LOGO', title: 'Logo Reine Coiffure', tags: ['Logo'], img: logoReineCoiffureImg },
-  { id: 19, category: 'PRINT', title: 'Porchet SEBA Voyage', tags: ['Print'], img: porchetSebaImg },
-  { id: 20, category: 'BRANDING', title: 'Branding Koudi Brush', tags: ['Branding'], img: brandingKoudiBrushImg },
-  { id: 21, category: 'LOGO', title: 'Logo Marathon-Akossiwa', tags: ['Logo'], img: logoMarathonImg },
-  { id: 22, category: 'BRANDING', title: 'Tanoush Lingerie Black', tags: ['Branding'], img: tanoushLingerieBlackImg },
-  { id: 23, category: 'BRANDING', title: 'Brand Tanoush Lingeries', tags: ['Branding'], img: brandTanoushImg },
-  { id: 24, category: 'SOCIAL MEDIA', title: 'Affiche Compte a rebours', tags: ['Social Media'], img: afficheCompteAReboursImg },
-  { id: 25, category: 'BRANDING', title: 'Branding Salade de fruits', tags: ['Branding'], img: brandingSaladeFruitsImg },
-  { id: 26, category: 'PRINT', title: 'Affiche Pack et Abonnemments', tags: ['Print'], img: affichePackImg },
-  { id: 27, category: 'BRANDING', title: 'Branding Kendrick\'s Collection', tags: ['Branding'], img: brandingKendricksImg },
-  { id: 28, category: 'PACKAGING', title: 'Bouillie de RIz_Plan de travail 1', tags: ['Packaging'], img: bouillieImg },
-]
+
+  const PORTFOLIO_ITEMS = [
+    { id: 0, category: 'PACKAGING', title: 'ÈWA — LE GOÛT DE CHEZ NOUS', year: '2025', tags: ['Packaging', 'Branding'], img: ewaImg },
+    { id: 1, category: 'BRANDING', title: 'BLACK STUDIO — CARTE DE VISITE', year: '2025', tags: ['Identité', 'Print'], img: carteDeVisiteImg },
+    { id: 2, category: 'BRANDING', title: 'BLACK STUDIO', year: '2025', tags: ['Identité', 'Branding'], img: blackStudioImg },
+    { id: 3, category: 'PACKAGING', title: 'KOUDI CHIPS — ÉTIQUETTE', year: '2025', tags: ['Packaging', 'Label'], img: etiquetteChipsImg },
+    { id: 4, category: 'BRANDING', title: 'KOUDI — BRUSH', year: '2025', tags: ['Branding', 'Identité'], img: brandingKoudiBrushImg },
+    { id: 5, category: 'SOCIAL MEDIA', title: 'WEEKEND ARTISTIQUE — COMPTE À REBOURS', year: '2026', tags: ['Event', 'Instagram'], img: afficheCompteARebourImg },
+    { id: 6, category: 'PRINT', title: 'WEEK ART — AFFICHE OFFICIELLE', year: '2026', tags: ['Affiche', 'Sponsors'], img: weekArtImg },
+    { id: 7, category: 'SOCIAL MEDIA', title: 'ASS. AKOSSIWA — BONJOUR LUNDI', year: '2025', tags: ['Association', 'Post'], img: afficheLundiImg },
+    { id: 8, category: 'SOCIAL MEDIA', title: 'ASS. AKOSSIWA — LUNDI MOTIVATION', year: '2025', tags: ['Association', 'Post'], img: lundiMotivationImg },
+    { id: 9, category: 'SOCIAL MEDIA', title: 'AKOSSIWA — LES ÉLITES NE S\'ARRÊTENT JAMAIS', year: '2025', tags: ['Motivation', 'Post'], img: afficheMotivationImg },
+
+    { id: 11, category: 'PRINT', title: 'AFFICHE POTERIE', year: '2025', tags: ['Affiche', 'Artisanat'], img: affichePoterieImg },
+    { id: 12, category: 'PRINT MEDIA', title: 'SEBA VOYAGE — BÂCHE', year: '2025', tags: ['Bâche', 'Grand format'], img: bacheSebaVoyageImg },
+    { id: 13, category: 'SOCIAL MEDIA', title: 'SEBA VOYAGE', year: '2025', tags: ['Voyage', 'Post'], img: sebaVoyageImg },
+    { id: 14, category: 'PRINT', title: 'SEBA VOYAGE — PORCHET', year: '2025', tags: ['Affiche', 'Voyage'], img: porchetSebaVoyageImg },
+    { id: 15, category: 'PACKAGING', title: 'BOUILLIE DE RIZ', year: '2025', tags: ['Packaging', 'Agroalimentaire'], img: bouillieRizImg },
+    { id: 16, category: 'PACKAGING', title: 'BRANDING BOISSON', year: '2025', tags: ['Packaging', 'Branding'], img: brandingBoissonImg },
+    { id: 17, category: 'PACKAGING', title: 'BRANDING SALADE DE FRUITS', year: '2025', tags: ['Packaging', 'Agroalimentaire'], img: brandingSaladeDeFruitsImg },
+    { id: 18, category: 'PACKAGING', title: 'BRANDING SANDWICH', year: '2025', tags: ['Packaging', 'Restauration'], img: brandingSandwichImg },
+    { id: 19, category: 'PACKAGING', title: 'BRANDING YAOURT', year: '2025', tags: ['Packaging', 'Agroalimentaire'], img: brandingYaourtImg },
+    { id: 20, category: 'BRANDING', title: 'TANOUSH LINGERIES — BRAND', year: '2025', tags: ['Branding', 'Mode'], img: brandTanoushImg },
+    { id: 21, category: 'LOGO', title: 'TANOUSH LINGERIE', year: '2025', tags: ['Logo', 'Mode'], img: tanoushLingerieImg },
+    { id: 22, category: 'LOGO', title: 'TANOUSH LINGERIE — BLACK', year: '2025', tags: ['Logo', 'Mode'], img: tanoushLingerieBlackImg },
+    { id: 23, category: 'BRANDING', title: "KENDRICK'S COLLECTION", year: '2025', tags: ['Branding', 'Mode'], img: brandingKendricksImg },
+    { id: 24, category: 'LOGO', title: "CURVY'S DESIGN", year: '2025', tags: ['Logo', 'Mode'], img: logoCurvyImg },
+    { id: 25, category: 'LOGO', title: 'KONDO', year: '2025', tags: ['Logo', 'Identité'], img: logoKondoImg },
+    { id: 26, category: 'LOGO', title: 'MARATHON COMMERCIAL — AKOSSIWA', year: '2025', tags: ['Logo', 'Événement'], img: logoMarathonImg },
+    { id: 27, category: 'LOGO', title: 'REINE COIFFURE', year: '2025', tags: ['Logo', 'Beauté'], img: logoReineCoiffureImg },
+    { id: 28, category: 'LOGO', title: 'TIB', year: '2025', tags: ['Logo', 'Identité'], img: logoTibImg },
+  ]
 
 const SERVICES = [
   { icon: 'logo', title: 'Logo Design', desc: "Identité visuelle percutante, mémorable, déclinée en tous formats vectoriels.", wa: "Bonjour, je veux un logo pour mon entreprise." },
