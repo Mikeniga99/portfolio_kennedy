@@ -12,6 +12,29 @@ const weekArtAfficheImg = new URL('./imports/portfolio/week-art-affiche-officiel
 const blackStudioGrandFormatImg = new URL('./imports/portfolio/black-studio-grand-format.jpg', import.meta.url).href
 const koudiChipsImg = new URL('./imports/portfolio/koudi-chips-etiquette.jpg', import.meta.url).href
 
+// Nouvelles images
+const img1 = new URL('./imports/portfolio/1.jpg', import.meta.url).href
+const img2 = new URL('./imports/portfolio/2.jpg', import.meta.url).href
+const img3 = new URL('./imports/portfolio/3.jpg', import.meta.url).href
+const img4 = new URL('./imports/portfolio/4.jpg', import.meta.url).href
+const plan1Img = new URL('./imports/portfolio/Plan1.png', import.meta.url).href
+const logo03Img = new URL('./imports/portfolio/Logo-03.png', import.meta.url).href
+const lundi20Img = new URL('./imports/portfolio/Lundi 20.png', import.meta.url).href
+const logoE2Img = new URL('./imports/portfolio/Logo E2-01.png', import.meta.url).href
+const koudiBrushImg = new URL('./imports/portfolio/Koudi Brush.png', import.meta.url).href
+const affichePub4Img = new URL('./imports/portfolio/Affiche Pub 4.jpg', import.meta.url).href
+const logoMarathonImg = new URL('./imports/portfolio/Logo Marathon-01.jpg', import.meta.url).href
+const affichePoterie2Img = new URL('./imports/portfolio/Affiche poterie 2.png', import.meta.url).href
+const tanoush1Img = new URL('./imports/portfolio/Tanoush Lingerie-01.png', import.meta.url).href
+const tanoush2Img = new URL('./imports/portfolio/Tanoush Lingerie-02.png', import.meta.url).href
+const logoCurvyImg = new URL('./imports/portfolio/logo Curvy\'s Design-01.jpg', import.meta.url).href
+const brandTanoushImg = new URL('./imports/portfolio/Brand Tanoush Lingeries.jpg', import.meta.url).href
+const affichePackImg = new URL('./imports/portfolio/Affiche Pack et Abonnemments.jpg', import.meta.url).href
+const logoKondoImg = new URL('./imports/portfolio/Logo Kondo_Plan de travail 1.png', import.meta.url).href
+const bouillieImg = new URL('./imports/portfolio/Bouillie de RIz_Plan de travail 1.jpg', import.meta.url).href
+const geminiImg = new URL('./imports/portfolio/Gemini_Generated_Image_xsqs96xsqs96xsqs.png', import.meta.url).href
+const porchetSebaImg = new URL('./imports/portfolio/Porchet Seba_Plan de travail 1_Plan de travail 1_Plan de travail 1.png', import.meta.url).href
+
 // ─── SVG Icons ──────────────────────────────────────────────────────────────
 
 const SVGIcon = ({ type, color = 'currentColor', size = 20 }: { type: string, color?: string, size?: number }) => {
@@ -56,6 +79,27 @@ const PORTFOLIO_ITEMS = [
   { id: 4, category: 'PRINT', title: 'WEEK ART — AFFICHE OFFICIELLE', year: '2026', tags: ['Affiche', 'Sponsors'], img: weekArtAfficheImg },
   { id: 5, category: 'PRINT MEDIA', title: 'BLACK STUDIO — GRAND FORMAT', year: '2025', tags: ['Kakémono', 'Bâche'], img: blackStudioGrandFormatImg },
   { id: 6, category: 'PACKAGING', title: 'KOUDI CHIPS — ÉTIQUETTE', year: '2025', tags: ['Packaging', 'Label'], img: koudiChipsImg },
+  { id: 7, category: 'DESIGN', title: 'CREATION 1', year: '2025', tags: ['Design'], img: img1 },
+  { id: 8, category: 'DESIGN', title: 'CREATION 2', year: '2025', tags: ['Design'], img: img2 },
+  { id: 9, category: 'DESIGN', title: 'CREATION 3', year: '2025', tags: ['Design'], img: img3 },
+  { id: 10, category: 'DESIGN', title: 'CREATION 4', year: '2025', tags: ['Design'], img: img4 },
+  { id: 11, category: 'PLAN', title: 'PLANNING 1', year: '2025', tags: ['Layout'], img: plan1Img },
+  { id: 12, category: 'LOGO', title: 'LOGO DESIGN 03', year: '2025', tags: ['Logo'], img: logo03Img },
+  { id: 13, category: 'SOCIAL MEDIA', title: 'POST LUNDI 20', year: '2025', tags: ['Post'], img: lundi20Img },
+  { id: 14, category: 'LOGO', title: 'LOGO E2', year: '2025', tags: ['Logo'], img: logoE2Img },
+  { id: 15, category: 'BRANDING', title: 'KOUDI BRUSH', year: '2025', tags: ['Branding'], img: koudiBrushImg },
+  { id: 16, category: 'PRINT', title: 'AFFICHE PUB 4', year: '2025', tags: ['Affiche'], img: affichePub4Img },
+  { id: 17, category: 'LOGO', title: 'LOGO MARATHON', year: '2025', tags: ['Logo'], img: logoMarathonImg },
+  { id: 18, category: 'PRINT', title: 'AFFICHE POTERIE', year: '2025', tags: ['Affiche'], img: affichePoterie2Img },
+  { id: 19, category: 'BRANDING', title: 'TANOUSH LINGERIE 1', year: '2025', tags: ['Branding'], img: tanoush1Img },
+  { id: 20, category: 'BRANDING', title: 'TANOUSH LINGERIE 2', year: '2025', tags: ['Branding'], img: tanoush2Img },
+  { id: 21, category: 'LOGO', title: 'LOGO CURVY\'S DESIGN', year: '2025', tags: ['Logo'], img: logoCurvyImg },
+  { id: 22, category: 'BRANDING', title: 'BRAND TANOUSH', year: '2025', tags: ['Branding'], img: brandTanoushImg },
+  { id: 23, category: 'PRINT', title: 'PACK ABONNEMENTS', year: '2025', tags: ['Affiche'], img: affichePackImg },
+  { id: 24, category: 'LOGO', title: 'LOGO KONDO', year: '2025', tags: ['Logo'], img: logoKondoImg },
+  { id: 25, category: 'PACKAGING', title: 'BOUILLIE DE RIZ', year: '2025', tags: ['Packaging'], img: bouillieImg },
+  { id: 26, category: 'ART', title: 'AI GENERATED', year: '2025', tags: ['Art'], img: geminiImg },
+  { id: 27, category: 'PRINT', title: 'PORCHET SEBA', year: '2025', tags: ['Affiche'], img: porchetSebaImg },
 ]
 
 const SERVICES = [
