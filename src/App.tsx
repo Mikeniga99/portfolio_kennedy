@@ -13,6 +13,27 @@ const blackStudioGrandFormatImg = new URL('./imports/portfolio/black-studio-gran
 const koudiChipsImg = new URL('./imports/portfolio/koudi-chips-etiquette.jpg', import.meta.url).href
 
 // Nouvelles images
+const img1 = new URL('./imports/portfolio/1.jpg', import.meta.url).href
+const img2 = new URL('./imports/portfolio/2.jpg', import.meta.url).href
+const img3 = new URL('./imports/portfolio/3.jpg', import.meta.url).href
+const img4 = new URL('./imports/portfolio/4.jpg', import.meta.url).href
+const plan1Img = new URL('./imports/portfolio/Plan1.png', import.meta.url).href
+const logo03Img = new URL('./imports/portfolio/Logo-03.png', import.meta.url).href
+const lundi20Img = new URL('./imports/portfolio/Lundi 20.png', import.meta.url).href
+const logoE2Img = new URL('./imports/portfolio/Logo E2-01.png', import.meta.url).href
+const koudiBrushImg = new URL('./imports/portfolio/Koudi Brush.png', import.meta.url).href
+const affichePub4Img = new URL('./imports/portfolio/Affiche Pub 4.jpg', import.meta.url).href
+const logoMarathonImg = new URL('./imports/portfolio/Logo Marathon-01.jpg', import.meta.url).href
+const affichePoterie2Img = new URL('./imports/portfolio/Affiche poterie 2.png', import.meta.url).href
+const tanoush1Img = new URL('./imports/portfolio/Tanoush Lingerie-01.png', import.meta.url).href
+const tanoush2Img = new URL('./imports/portfolio/Tanoush Lingerie-02.png', import.meta.url).href
+const logoCurvyImg = new URL('./imports/portfolio/logo Curvy\'s Design-01.jpg', import.meta.url).href
+const brandTanoushImg = new URL('./imports/portfolio/Brand Tanoush Lingeries.jpg', import.meta.url).href
+const affichePackImg = new URL('./imports/portfolio/Affiche Pack et Abonnemments.jpg', import.meta.url).href
+const logoKondoImg = new URL('./imports/portfolio/Logo Kondo_Plan de travail 1.png', import.meta.url).href
+const bouillieImg = new URL('./imports/portfolio/Bouillie de RIz_Plan de travail 1.jpg', import.meta.url).href
+const geminiImg = new URL('./imports/portfolio/Gemini_Generated_Image_xsqs96xsqs96xsqs.png', import.meta.url).href
+const porchetSebaImg = new URL('./imports/portfolio/Porchet Seba_Plan de travail 1_Plan de travail 1_Plan de travail 1.png', import.meta.url).href
 
 
 // ─── SVG Icons ──────────────────────────────────────────────────────────────
